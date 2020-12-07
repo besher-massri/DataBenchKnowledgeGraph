@@ -1,0 +1,1417 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://databench.ijs.si/ontology/"
+     xml:base="http://databench.ijs.si/ontology/"
+     xmlns:dc="http://purl.org/dc/terms/"
+     xmlns:dbo="http://dbpedia.org/ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fabio="http://purl.org/spar/fabio/"
+     xmlns:dbench="http:/databench.ijs.si/ontology/class"
+     xmlns:dbenchp="http:/databench.ijs.si/ontology/property">
+    <owl:Ontology rdf:about="http://databench.ijs.si/ontology/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYearMonth -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://databench.ijs.si/ontology/entityOf -->
+
+    <owl:ObjectProperty rdf:about="http://databench.ijs.si/ontology/entityOf">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:range rdf:resource="http://databench.ijs.si/ontology/Tool"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/exampleOf -->
+
+    <owl:ObjectProperty rdf:about="http://databench.ijs.si/ontology/exampleOf">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/Tool"/>
+        <rdfs:range rdf:resource="http://databench.ijs.si/ontology/Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/statCategory -->
+
+    <owl:ObjectProperty rdf:about="http://databench.ijs.si/ontology/statCategory">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/Stat"/>
+        <rdfs:range rdf:resource="http://databench.ijs.si/ontology/Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/subTopicOf -->
+
+    <owl:ObjectProperty rdf:about="http://databench.ijs.si/ontology/subTopicOf">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/Topic"/>
+        <rdfs:range rdf:resource="http://databench.ijs.si/ontology/Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://databench.ijs.si/ontology/affiliation -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/affiliation">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://databench.ijs.si/ontology/EUResearchProject"/>
+                    <rdf:Description rdf:about="http://databench.ijs.si/ontology/ResearchPaper"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/citations -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/citations">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/conference -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/conference">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="http://databench.ijs.si/ontology/journal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/coordinator -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/coordinator">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/EUResearchProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/cost -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/cost">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/EUResearchProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/createdTime -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/createdTime">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://databench.ijs.si/ontology/JobPosting"/>
+                    <rdf:Description rdf:about="http://databench.ijs.si/ontology/NewsArticle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/currency -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/currency">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/JobPosting"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>dollars</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>euros</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>pounds</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/endDate -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/endDate">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/EUResearchProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/forks -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/forks">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/GithubRepository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/fundingProgram -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/fundingProgram">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/EUResearchProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/fundingSchema -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/fundingSchema">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/EUResearchProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/issues -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/issues">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/GithubRepository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/journal -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/journal">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/paperType -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/paperType">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/ResearchPaper"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>ArXiv</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Book</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Conference</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Journal</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>Other</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/programmingLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/programmingLanguage">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/GithubRepository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/pullRequests -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/pullRequests">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/GithubRepository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/salaryLowerLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/salaryLowerLimit">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/JobPosting"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/salaryUpperLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/salaryUpperLimit">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/JobPosting"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/sentiment -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/sentiment">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/NewsArticle"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/stars -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/stars">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/GithubRepository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/startDate -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/startDate">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/EUResearchProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/statCount -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/statCount">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/Stat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/statDataSource -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/statDataSource">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/Stat"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>EU Research Project</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Github Repository</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Job Posting</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>News Article</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>Research Paper</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/status -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/status">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/EUResearchProject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Completed</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Ongoing</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Stopped</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/watchers -->
+
+    <owl:DatatypeProperty rdf:about="http://databench.ijs.si/ontology/watchers">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/GithubRepository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://dbpedia.org/ontology/country -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/country">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://dbpedia.org/ontology/wikiPageLink -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/wikiPageLink">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/abstract">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/created">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/language">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/license">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/GithubRepository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://databench.ijs.si/ontology/NewsArticle"/>
+                    <rdf:Description rdf:about="http://databench.ijs.si/ontology/ResearchPaper"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/spar/fabio/hasURL -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/spar/fabio/hasURL">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#YearMonth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#YearMonth">
+        <rdfs:domain rdf:resource="http://databench.ijs.si/ontology/Stat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://databench.ijs.si/ontology/Category"/>
+                    <rdf:Description rdf:about="http://databench.ijs.si/ontology/DataSource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://databench.ijs.si/ontology/Category -->
+
+    <owl:Class rdf:about="http://databench.ijs.si/ontology/Category">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://dbpedia.org/ontology/wikiPageLink"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/DataSource -->
+
+    <owl:Class rdf:about="http://databench.ijs.si/ontology/DataSource">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/entityOf"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://dbpedia.org/ontology/country"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/abstract"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/created"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/language"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/fabio/hasURL"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/EUResearchProject -->
+
+    <owl:Class rdf:about="http://databench.ijs.si/ontology/EUResearchProject">
+        <rdfs:subClassOf rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/endDate"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/endDate"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/startDate"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/startDate"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/affiliation"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/coordinator"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/cost"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/fundingProgram"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/fundingSchema"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/status"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/GithubRepository -->
+
+    <owl:Class rdf:about="http://databench.ijs.si/ontology/GithubRepository">
+        <rdfs:subClassOf rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/license"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/license"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/programmingLanguage"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/forks"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/issues"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/pullRequests"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/stars"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/watchers"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/JobPosting -->
+
+    <owl:Class rdf:about="http://databench.ijs.si/ontology/JobPosting">
+        <rdfs:subClassOf rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/createdTime"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/currency"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/salaryLowerLimit"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/salaryUpperLimit"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/NewsArticle -->
+
+    <owl:Class rdf:about="http://databench.ijs.si/ontology/NewsArticle">
+        <rdfs:subClassOf rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/sentiment"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/sentiment"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/createdTime"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/ResearchPaper -->
+
+    <owl:Class rdf:about="http://databench.ijs.si/ontology/ResearchPaper">
+        <rdfs:subClassOf rdf:resource="http://databench.ijs.si/ontology/DataSource"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/conference"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/conference"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/journal"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/journal"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/affiliation"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/citations"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/paperType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/Stat -->
+
+    <owl:Class rdf:about="http://databench.ijs.si/ontology/Stat">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/statCategory"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/statCount"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/statDataSource"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#YearMonth"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/Tool -->
+
+    <owl:Class rdf:about="http://databench.ijs.si/ontology/Tool">
+        <rdfs:subClassOf rdf:resource="http://databench.ijs.si/ontology/Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/exampleOf"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/Topic -->
+
+    <owl:Class rdf:about="http://databench.ijs.si/ontology/Topic">
+        <rdfs:subClassOf rdf:resource="http://databench.ijs.si/ontology/Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://databench.ijs.si/ontology/subTopicOf"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://databench.ijs.si/ontology/affiliation -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/affiliation">
+        <rdfs:label xml:lang="en">Affiliation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/citations -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/citations">
+        <rdfs:label xml:lang="en">Citations</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/conference -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/conference">
+        <rdfs:label xml:lang="en">Conference</rdfs:label>
+        <rdfs:label xml:lang="en">The name of the conference where the paper got published</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/coordinator -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/coordinator">
+        <rdfs:label xml:lang="en">Project Coordinator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/cost -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/cost">
+        <rdfs:label xml:lang="en">Project Cost</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/createdTime -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/createdTime">
+        <rdfs:label xml:lang="en">Time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/currency -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/currency">
+        <rdfs:label xml:lang="en">Currency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/endDate -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/endDate">
+        <rdfs:label xml:lang="en">End Date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/forks -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/forks">
+        <rdfs:label xml:lang="en">Forks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/fundingProgram -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/fundingProgram">
+        <rdfs:label xml:lang="en">Funding Program</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/fundingSchema -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/fundingSchema">
+        <rdfs:label xml:lang="en">Funding Schema</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/issues -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/issues">
+        <rdfs:label xml:lang="en">Issues</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/journal -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/journal">
+        <rdfs:label xml:lang="en">Journal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/paperType -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/paperType">
+        <rdfs:label xml:lang="en">Paper Type</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/programmingLanguage -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/programmingLanguage">
+        <rdfs:label xml:lang="en">Programming Language</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/pullRequests -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/pullRequests">
+        <rdfs:label xml:lang="en">Pull Requests</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/salaryLowerLimit -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/salaryLowerLimit">
+        <rdfs:label xml:lang="en">Salary Lower Limit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/salaryUpperLimit -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/salaryUpperLimit">
+        <rdfs:label xml:lang="en">Salary Upper Limit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/sentiment -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/sentiment">
+        <rdfs:label xml:lang="en">Sentiment</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/stars -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/stars">
+        <rdfs:label xml:lang="en">Stars</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/startDate -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/startDate">
+        <rdfs:label xml:lang="en">Start Date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/statCount -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/statCount">
+        <rdfs:label xml:lang="en">Stat Count</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/statDataSource -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/statDataSource">
+        <rdfs:label xml:lang="en">Stats Data Source</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/status -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/status">
+        <rdfs:label xml:lang="en">Project Status</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://databench.ijs.si/ontology/watchers -->
+
+    <owl:NamedIndividual rdf:about="http://databench.ijs.si/ontology/watchers">
+        <rdfs:label xml:lang="en">Watchers</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/ontology/country -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/ontology/country">
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/ontology/wikiPageLink -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/ontology/wikiPageLink">
+        <rdfs:label xml:lang="en">Wiki</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/elements/1.1/abstract">
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/elements/1.1/created">
+        <rdfs:label xml:lang="en">Creation Date</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:label xml:lang="en">Author</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <rdfs:label xml:lang="en">Source ID</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/elements/1.1/language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/elements/1.1/license">
+        <rdfs:label xml:lang="en">License</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/fabio/hasURL -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/fabio/hasURL">
+        <rdfs:label xml:lang="en">URL</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#YearMonth -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#YearMonth">
+        <rdfs:label xml:lang="en">year-month</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/affiliation">
+        <rdfs:comment xml:lang="en">The affiliations of the authors of the research paper, or the partner institutes in the eu research project</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/citations">
+        <rdfs:comment xml:lang="en">The number of citations of the research paper</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/coordinator">
+        <rdfs:comment xml:lang="en">The coorindator of the eu resarch project</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/cost">
+        <rdfs:comment xml:lang="en">The total cost of the project, in euros</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/createdTime">
+        <rdfs:comment xml:lang="en">The time of publishing</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/currency">
+        <rdfs:comment xml:lang="en">The currency of the salary</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/endDate">
+        <rdfs:comment xml:lang="en">The ending date of the eu research project</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/forks">
+        <rdfs:comment xml:lang="en">The number of forks from the repository</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/fundingProgram">
+        <rdfs:comment xml:lang="en">The funding program of the project</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/fundingSchema">
+        <rdfs:comment xml:lang="en">The mechanism in which the project is funded</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/issues">
+        <rdfs:comment xml:lang="en">The number of issues the project has</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/journal">
+        <rdfs:comment xml:lang="en">The name of the journal where the paper got published</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/paperType">
+        <rdfs:comment xml:lang="en">The type of research paper, i.e. whether it is a journal, conference, etc.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/programmingLanguage">
+        <rdfs:comment xml:lang="en">The programming languages used to implement the project</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/pullRequests">
+        <rdfs:comment xml:lang="en">The number of pull requests</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/salaryLowerLimit">
+        <rdfs:comment xml:lang="en">The lower limit in the salary interval of the job posting</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/salaryUpperLimit">
+        <rdfs:comment xml:lang="en">The upper limit in the salary interval of the job posting</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/sentiment">
+        <rdfs:comment xml:lang="en">The sentiment of the news article</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/stars">
+        <rdfs:comment xml:lang="en">The number of stars the repository has</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/startDate">
+        <rdfs:comment xml:lang="en">The starting date of the eu research project</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/statCount">
+        <rdfs:comment xml:lang="en">The count of the Data Source instances about the category in the specified month</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/statDataSource">
+        <rdfs:comment xml:lang="en">The data source that the state is about</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/status">
+        <rdfs:comment xml:lang="en">The status of the project</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://databench.ijs.si/ontology/watchers">
+        <rdfs:comment xml:lang="en">the number of users watching for updates in the repository</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://dbpedia.org/ontology/country">
+        <rdfs:comment xml:lang="en">The countries involved in the Data Source</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://dbpedia.org/ontology/wikiPageLink">
+        <rdfs:comment xml:lang="en">Wikipedia link of category</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/abstract">
+        <rdfs:comment xml:lang="en">The description of the entity, short summary, or abstract</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/created">
+        <rdfs:comment xml:lang="en">Date of publishing/creating</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:comment xml:lang="en">The authors of the research paper</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <rdfs:comment xml:lang="en">The local source ID</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
+        <rdfs:comment xml:lang="en">the language of the Data Source</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/license">
+        <rdfs:comment xml:lang="en">The type of license</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <rdfs:comment xml:lang="en">The publisher of the research paper, or the source of the news article</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/spar/fabio/hasURL">
+        <rdfs:comment xml:lang="en">The url of the Data Source</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#YearMonth">
+        <rdfs:comment xml:lang="en">The year and month of the stat</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
