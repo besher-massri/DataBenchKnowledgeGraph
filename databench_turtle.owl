@@ -7,8 +7,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
-@prefix dbench: <http:/databench.ijs.si/ontology/class> .
-@prefix dbenchp: <http:/databench.ijs.si/ontology/property> .
 @base <http://databench.ijs.si/ontology/> .
 
 <http://databench.ijs.si/ontology/> rdf:type owl:Ontology .
@@ -234,7 +232,7 @@ xsd:time rdf:type rdfs:Datatype .
 ###  http://databench.ijs.si/ontology/statCount
 :statCount rdf:type owl:DatatypeProperty ;
            rdfs:domain :Stat ;
-           rdfs:range xsd:nonNegativeInteger .
+           rdfs:range xsd:decimal .
 
 
 ###  http://databench.ijs.si/ontology/statDataSource
