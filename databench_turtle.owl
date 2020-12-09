@@ -244,12 +244,15 @@ xsd:time rdf:type rdfs:Datatype .
                                          rdf:rest [ rdf:type rdf:List ;
                                                     rdf:first "Github Repository" ;
                                                     rdf:rest [ rdf:type rdf:List ;
-                                                               rdf:first "Job Posting" ;
+                                                               rdf:first "Google Trends" ;
                                                                rdf:rest [ rdf:type rdf:List ;
-                                                                          rdf:first "News Article" ;
+                                                                          rdf:first "Job Posting" ;
                                                                           rdf:rest [ rdf:type rdf:List ;
-                                                                                     rdf:first "Research Paper" ;
-                                                                                     rdf:rest rdf:nil
+                                                                                     rdf:first "News Article" ;
+                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                rdf:first "Research Paper" ;
+                                                                                                rdf:rest rdf:nil
+                                                                                              ]
                                                                                    ]
                                                                         ]
                                                              ]
