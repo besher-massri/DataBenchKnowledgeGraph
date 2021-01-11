@@ -1838,9 +1838,9 @@
     rdfs:label "DataRPM"^^xsd:string ;
     dbench:ExampleOf <http://databench.ijs.si/instances/machine_learning> .
 
-<http://databench.ijs.si/instances/datascience> a dbench:Tool ;
+<http://databench.ijs.si/instances/datascience> a dbench:Topic ;
     rdfs:label "DataScience"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/misc> ;
+    dbench:SubTopicOf <http://databench.ijs.si/instances/misc> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Data_science> .
 
 <http://databench.ijs.si/instances/datascope> a dbench:Tool ;
