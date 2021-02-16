@@ -412,7 +412,7 @@
 
 <http://databench.ijs.si/instances/amazon_quicksight> a dbench:Tool ;
     rdfs:label "Amazon QuickSight"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/amazon_redshift> a dbench:Tool ;
     rdfs:label "Amazon Redshift"^^xsd:string ;
@@ -723,7 +723,7 @@
 
 <http://databench.ijs.si/instances/arcadia_data> a dbench:Tool ;
     rdfs:label "Arcadia Data"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/area_1_security> a dbench:Tool ;
     rdfs:label "Area 1 Security"^^xsd:string ;
@@ -779,7 +779,7 @@
 
 <http://databench.ijs.si/instances/atscale> a dbench:Tool ;
     rdfs:label "AtScale"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/attensity> a dbench:Tool ;
     rdfs:label "Attensity"^^xsd:string ;
@@ -847,7 +847,7 @@
 
 <http://databench.ijs.si/instances/aviso> a dbench:Tool ;
     rdfs:label "Aviso"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/aws_iot_core> a dbench:Tool ;
     rdfs:label "AWS IoT Core"^^xsd:string ;
@@ -1000,7 +1000,7 @@
 
 <http://databench.ijs.si/instances/bime_analytics> a dbench:Tool ;
     rdfs:label "Bime Analytics"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/bina_technologies> a dbench:Tool ;
     rdfs:label "Bina Technologies"^^xsd:string ;
@@ -1008,7 +1008,7 @@
 
 <http://databench.ijs.si/instances/birst> a dbench:Tool ;
     rdfs:label "Birst"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/bitglass> a dbench:Tool ;
     rdfs:label "Bitglass"^^xsd:string ;
@@ -1361,7 +1361,7 @@
 
 <http://databench.ijs.si/instances/clari> a dbench:Tool ;
     rdfs:label "Clari"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/clarifai> a dbench:Tool ;
     rdfs:label "Clarifai"^^xsd:string ;
@@ -1388,7 +1388,7 @@
 
 <http://databench.ijs.si/instances/clearbit> a dbench:Tool ;
     rdfs:label "Clearbit"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/clearpath_robotics> a dbench:Tool ;
     rdfs:label "Clearpath Robotics"^^xsd:string ;
@@ -1397,7 +1397,7 @@
 
 <http://databench.ijs.si/instances/clearstory_data> a dbench:Tool ;
     rdfs:label "ClearStory Data"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/clever> a dbench:Tool ;
     rdfs:label "Clever"^^xsd:string ;
@@ -1558,7 +1558,7 @@
 
 <http://databench.ijs.si/instances/conversica> a dbench:Tool ;
     rdfs:label "Conversica"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Conversica> .
 
 <http://databench.ijs.si/instances/coreos> a dbench:Tool ;
@@ -2040,7 +2040,7 @@
 
 <http://databench.ijs.si/instances/domo_(visualize)> a dbench:Tool ;
     rdfs:label "Domo (Visualize)"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Domo_(company)> .
 
 <http://databench.ijs.si/instances/drawbridge> a dbench:Tool ;
@@ -2126,7 +2126,7 @@
 
 <http://databench.ijs.si/instances/eagleeye_analytics> a dbench:Tool ;
     rdfs:label "EagleEye Analytics"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/earnest> a dbench:Tool ;
     rdfs:label "Earnest"^^xsd:string ;
@@ -2679,11 +2679,11 @@
 
 <http://databench.ijs.si/instances/gong> a dbench:Tool ;
     rdfs:label "Gong"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/gooddata> a dbench:Tool ;
     rdfs:label "GoodData"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/GoodData> .
 
 <http://databench.ijs.si/instances/google> a dbench:Tool ;
@@ -3083,7 +3083,7 @@
 
 <http://databench.ijs.si/instances/host_analytics> a dbench:Tool ;
     rdfs:label "Host Analytics"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/howgood> a dbench:Tool ;
     rdfs:label "HowGood"^^xsd:string ;
@@ -3368,7 +3368,7 @@
 
 <http://databench.ijs.si/instances/information_builders_(webfocus_infoassist+)> a dbench:Tool ;
     rdfs:label "Information Builders (WEBfocus infoassist+)"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Information_Builders> .
 
 <http://databench.ijs.si/instances/infosum> a dbench:Tool ;
@@ -3517,7 +3517,7 @@
 
 <http://databench.ijs.si/instances/jaspersoft_(visualize.js)> a dbench:Tool ;
     rdfs:label "Jaspersoft (Visualize.js)"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/jethro> a dbench:Tool ;
     rdfs:label "Jethro"^^xsd:string ;
@@ -3603,7 +3603,7 @@
 
 <http://databench.ijs.si/instances/kayrros> a dbench:Tool ;
     rdfs:label "Kayrros"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/kdb+> a dbench:Tool ;
     rdfs:label "Kdb+"^^xsd:string ;
@@ -3776,7 +3776,7 @@
 
 <http://databench.ijs.si/instances/kyvos_insights> a dbench:Tool ;
     rdfs:label "Kyvos Insights"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Kyvos> .
 
 <http://databench.ijs.si/instances/labelbox> a dbench:Tool ;
@@ -4295,7 +4295,7 @@
 
 <http://databench.ijs.si/instances/microsoft_power_bi_(bigdata_version)> a dbench:Tool ;
     rdfs:label "Microsoft Power BI (BigData version)"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Microsoft_Power_BI> .
 
 <http://databench.ijs.si/instances/microsoft_sql_server> a dbench:Tool ;
@@ -4310,7 +4310,7 @@
 
 <http://databench.ijs.si/instances/microstrategy> a dbench:Tool ;
     rdfs:label "Microstrategy"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/MicroStrategy> .
 
 <http://databench.ijs.si/instances/mighty_ai> a dbench:Tool ;
@@ -4953,7 +4953,7 @@
 
 <http://databench.ijs.si/instances/palantir> a dbench:Tool ;
     rdfs:label "Palantir"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Palantir_Technologies> .
 
 <http://databench.ijs.si/instances/pandas> a dbench:Tool ;
@@ -5146,7 +5146,7 @@
 
 <http://databench.ijs.si/instances/platfora> a dbench:Tool ;
     rdfs:label "Platfora"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Platfora> .
 
 <http://databench.ijs.si/instances/plotly> a dbench:Tool ;
@@ -5323,7 +5323,7 @@
 
 <http://databench.ijs.si/instances/qlikview> a dbench:Tool ;
     rdfs:label "QlikView"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/qualtrics> a dbench:Tool ;
     rdfs:label "Qualtrics"^^xsd:string ;
@@ -5505,7 +5505,7 @@
 
 <http://databench.ijs.si/instances/relateiq> a dbench:Tool ;
     rdfs:label "RelateIQ"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/SalesforceIQ> .
 
 <http://databench.ijs.si/instances/remesh> a dbench:Tool ;
@@ -5678,7 +5678,7 @@
 
 <http://databench.ijs.si/instances/salesforce_einstein_analytics> a dbench:Tool ;
     rdfs:label "Salesforce Einstein Analytics"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/salesforce_radian6> a dbench:Tool ;
     rdfs:label "Salesforce Radian6"^^xsd:string ;
@@ -5863,7 +5863,7 @@
 
 <http://databench.ijs.si/instances/seeq> a dbench:Tool ;
     rdfs:label "Seeq"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Seeq_Corporation> .
 
 <http://databench.ijs.si/instances/segment> a dbench:Tool ;
@@ -6031,7 +6031,7 @@
 
 <http://databench.ijs.si/instances/sisense> a dbench:Tool ;
     rdfs:label "Sisense"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Sisense> .
 
 <http://databench.ijs.si/instances/sisu_data> a dbench:Tool ;
@@ -6634,7 +6634,7 @@
 
 <http://databench.ijs.si/instances/thoughtspot> a dbench:Tool ;
     rdfs:label "ThoughtSpot"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/ThoughtSpot> .
 
 <http://databench.ijs.si/instances/threatmetrix> a dbench:Tool ;
@@ -6679,7 +6679,7 @@
 
 <http://databench.ijs.si/instances/tidemark> a dbench:Tool ;
     rdfs:label "Tidemark"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> ;
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Tidemark> .
 
 <http://databench.ijs.si/instances/tidyverse> a dbench:Tool ;
@@ -6807,7 +6807,7 @@
 
 <http://databench.ijs.si/instances/troops.ai> a dbench:Tool ;
     rdfs:label "Troops.ai"^^xsd:string ;
-    dbench:ExampleOf <http://databench.ijs.si/instances/bi> .
+    dbench:ExampleOf <http://databench.ijs.si/instances/business_intelligence> .
 
 <http://databench.ijs.si/instances/trueaccord> a dbench:Tool ;
     rdfs:label "TrueAccord"^^xsd:string ;
@@ -7658,8 +7658,8 @@
     dbench:SubTopicOf <http://databench.ijs.si/instances/computer_science> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Monitoring> .
 
-<http://databench.ijs.si/instances/bi> a dbench:Topic ;
-    rdfs:label "bi"^^xsd:string ;
+<http://databench.ijs.si/instances/business_intelligence> a dbench:Topic ;
+    rdfs:label "Business intelligence"^^xsd:string ;
     dbench:SubTopicOf <http://databench.ijs.si/instances/computer_science> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Business_intelligence> .
 
@@ -7698,7 +7698,7 @@
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Extract,_transform,_load> .
 
 <http://databench.ijs.si/instances/artificial_intelligence> a dbench:Topic ;
-    rdfs:label "Artificial Intelligence"^^xsd:string ;
+    rdfs:label "Artificial intelligence"^^xsd:string ;
     dbench:SubTopicOf <http://databench.ijs.si/instances/computer_science> ;
     dbo:wikiPageWikiLink <http://en.wikipedia.org/wiki/Artificial_intelligence> .
 
